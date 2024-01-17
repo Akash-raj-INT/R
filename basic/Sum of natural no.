@@ -1,0 +1,3 @@
+natural_numbers <- 1:10
+sum_of_natural_numbers <- sum(natural_numbers)
+print(sum_of_natural_numbers)
