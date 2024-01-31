@@ -1,0 +1,14 @@
+# Logical variables
+is_sunny <- TRUE
+is_raining <- FALSE
+
+# Logical vector
+weather_conditions <- c(TRUE, FALSE, TRUE, FALSE)
+
+# Logical comparison
+temperature <- 25
+is_warm <- temperature > 20
+
+# Logical operations
+both_conditions <- is_sunny & is_warm
+either_condition <- is_sunny | is_raining
