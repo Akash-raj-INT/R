@@ -1,0 +1,12 @@
+
+
+# Create a factor
+gender <- factor(c("Male", "Female", "Male", "Female"))
+
+# Create a list with a factor
+my_list <- list(names = c("John", "Alice", "Bob", "Eva"), 
+                ages = c(25, 30, 22, 28),
+                gender = gender)
+
+# Print the list
+print(my_list)
