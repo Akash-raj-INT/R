@@ -1,0 +1,24 @@
+#array
+a<-c(1,2,3,4)
+a
+b<-c(5,6,7,8)
+b
+d<- array(c(a,b),dim=c(2,2,2))
+d
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+row_names<- c("r1","r2")
+col_names<- c("c1","c2")
+mat_names<- c("m1","m2")
+
+d<- array(c(a,b),dim=c(2,2,2), dimnames=list(row_names, col_names,mat_names))
+d[2,,1]
+d[1,1,1]
+d[c(1,2),,1]
+d[ ,c(1,2),2]
+
+res <-apply(d,c(1),sum)
+res 
+
+
