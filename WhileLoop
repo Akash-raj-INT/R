@@ -1,0 +1,6 @@
+int count = 0;
+while (count < 5) {
+    // Your code to be repeated goes here
+    System.out.println("Iteration: " + count);
+    count++;
+}
