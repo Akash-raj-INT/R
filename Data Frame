@@ -1,0 +1,5 @@
+a=data.frame(Student_RollNo=c(1,2,3,4,5,6,7),Student_name=c("a","b","c","d","e","f","g"),Student_marks=c(10,20,15,18,11,16,19))
+head(a,n=3)
+tail(a,n=3)
+str(a)
+subset(a,Student_marks>15,select=c(Student_name,Student_marks))
