@@ -1,0 +1,2 @@
+res1<-sapply(a,toupper,simplify=FALSE)
+res1
