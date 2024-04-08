@@ -1,0 +1,17 @@
+library("dplyr")
+my_data <- data.frame(
+  col1 = c(1,2,3,4,5),
+  col2 = c("a", "b", "c", "d", "e"),
+  col3 = c(TRUE, FALSE, TRUE, TRUE, FALSE),
+  col4 = c(10.5, 20.3, 15.2, 12.7, 18.9),
+  col5 = c("apple", "banana", "green", "grape", "kiwi"),
+  col6 = c("male","female","male","female","male"),
+  col7 = sample(1:100, 5),
+  col8 = c(12, 15, 18, 20, 22),
+  col9 = c("math","sst","hindi","science","english"),
+  col10 = c("punjab","Rajasthan", "Haryana", "Delhi","Bihar")
+  
+)
+
+s3 <- select(my_data,col2,col4,col6,col8,col10)
+s3
