@@ -1,0 +1,25 @@
+a<-read.csv(file.choose())
+a
+class(a)
+View(a)
+dim(a)
+
+y<-read.csv("C:\Users\ASUS\Desktop\diabetes.csv")
+y
+
+head(y ,n=3)
+tail(y ,n=5)
+a[1,]
+a[c(1,2,3),1]
+a[,c(3)]
+a[,c(5,6,7)]
+a[1,3]
+a[20,7]
+
+b=subset(a,select = c(BloodPressure,Age))
+head(b,n=10)
+tail(b,n=10)
+a[a$Glucose>125,]
+a[a$SkinThickness > 19 & a$Age > 35 & a$Age < 50, "Age"]
+a[a$Age >= 25 & a$Age <= 35, c("BloodPressure", "Insulin", "Glucose")]
+a[a$Age > 35, ]
