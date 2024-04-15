@@ -1,0 +1,10 @@
+d <- data.frame(
+  name = c("ayush", "mohammad", "masni", "sam"),
+  marks = c(8, 9, 10, 7),
+  age = c(20, 21, 18, 19),
+  address = c("low gate", "BH1", "Bh2", "GH6")
+)
+print(d)
+
+mark <- d %>% arrange(marks)
+print(mark)
