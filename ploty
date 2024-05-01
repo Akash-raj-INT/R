@@ -1,0 +1,50 @@
+library("ggplot2")
+library("dplyr")
+P=ggplot(data = iris,aes(x=Sepal.Length,y=Sepal.Width))
+P + geom_point() +facet_wrap(~Species) +geom_smooth(method = "lm")+theme(axis.text = element_text(colour = "green",size=18))
+
+ggplot(filter(iris,Species=="setosa"),
+       aes(x=Sepal.Length,y=Sepal.Width))+
+         geom_point()+ 
+         coord_cartesian(xlim=c(4,8),ylim=c(2,5))
+
+
+
+library(plotly)
+df=mtcars
+df$name=row.names(mtcars)
+plot_ly(data=df,x=~cyl,y=~disp,color = ~factor(cyl))
+
+data("iris")
+
+plot <- plot_ly(x = ~iris$Sepal.Length, type = "histogram")
+
+layout(plot, title = "Sepal Length Histogram",
+       xaxis = list(title = "Sepal Length"),
+       yaxis = list(title = "Count"))
+
+# Install and import necessary libraries
+install.packages("plotly")
+library(plotly)
+
+# Create histogram plot for Sepal Length
+plot <- plot_ly(data = iris, x = ~Sepal.Length, type = "histogram")
+
+# Define layout for the histogram plot
+layout(plot, title = "Sepal Length Histogram",
+       xaxis = list(title = "Sepal Length"),
+       yaxis = list(title = "Count"))
+
+# Create a bar plot
+fig <- plot_ly(x = c("Bevarage", "Vegetable", "Dairy"),
+               y = c(20, 14, 25),
+               type = "bar",
+               marker = list(color = "orange"))
+
+# Add the bar plot as a trace to the histogram plot
+plot <- add_trace(plot, fig)
+
+# Display the combined plot
+plot
+
+
